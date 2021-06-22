@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.xyhj</groupId>
+	<artifactId>xyhj</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.5.RELEASE</version>
+	</parent>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<fastjson.version>1.2.72</fastjson.version>
+		<logback-classic.version>1.1.7</logback-classic.version>
+		<slf4j-api.version>1.7.7</slf4j-api.version>
+		<commons-lang3.version>3.5</commons-lang3.version>
+		<commons.beanutils.version>1.7.0</commons.beanutils.version>
+		<commons.collections.version>3.2.2</commons.collections.version>
+		<spring-cloud-alibaba.version>2.2.3.RELEASE</spring-cloud-alibaba.version>
+		<zxing.version>3.4.0</zxing.version>
+		<feign-form.version>3.8.0</feign-form.version>
+		<commons-fileupload.version>1.4</commons-fileupload.version>
+		<mysql.version>8.0.25</mysql.version>
+		<mybatis.version>3.5.3</mybatis.version>
+		<mybatisplus.version>3.3.1</mybatisplus.version>
+		<mybatis-spring.version>2.1.1</mybatis-spring.version>
+		<easypoi.version>4.1.2</easypoi.version>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- xxl-job-core -->
+		<dependency>
+			<groupId>com.xuxueli</groupId>
+			<artifactId>xxl-job-core</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-nacos-config -->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+			<version>2.1.4.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<!--Swagger  文档-->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+		
+		<!--mybatis-plus-->
+		<!-- mybatisplus -->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-core</artifactId>
+			<version>${mybatisplus.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-extension</artifactId>
+			<version>${mybatisplus.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-generator</artifactId>
+			<version>${mybatisplus.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- mybatis -->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.9</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- druid数据源 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.9</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.72</version>
+		</dependency>
+		
+		<!--easypoi-->
+		<!-- https://mvnrepository.com/artifact/cn.afterturn/easypoi-spring-boot-starter -->
+		<dependency>
+			<groupId>cn.afterturn</groupId>
+			<artifactId>easypoi-spring-boot-starter</artifactId>
+			<version>4.2.0</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-core-asl -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.9.12</version>
+		</dependency>
+		
+		
+		<!-- springboot分页插件 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<!-- 特别注意版本问题, 看到评论以后得以纠正 -->
+			<version>1.2.3</version>
+		</dependency>
+	</dependencies>
+
+</project>
