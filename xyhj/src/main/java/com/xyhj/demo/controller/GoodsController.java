@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.*;
 /**
  * @author 12623
  */
-//@RestController
-//@RequestMapping("/goods")
+@RestController
+@RequestMapping("/goods")
 public class GoodsController {
 	
 	@Autowired
